@@ -13,12 +13,11 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            BackgroundView(topColor: isNight ? .black : Color("lightblue"),
-                           bottomColor: isNight ? .gray : .white)
+            BackgroundView(isNight: $isNight)
             VStack {
                 CityTextView(cityName: "Cupertino, CA")
                 
-                MainWeatherStatusView(imageName: "cloud.sun.fill",
+                MainWeatherStatusView(imageName: isNight ? "moon.stars.fill" : "cloud.sun.fill",
                                       temperature: 76)
                 
                 HStack(spacing: 25) {
@@ -90,11 +89,10 @@ struct WeatherDayView: View {
 
 struct BackgroundView: View {
     
-    var topColor: Color
-    var bottomColor: Color
+    @Binding var isNight: Bool
     
     var body: some View {
-        LinearGradient(gradient: Gradient(colors:[topColor, bottomColor]),
+        LinearGradient(gradient: Gradient(colors: [isNight ? .black : Color("offwhite"), isNight ? .gray : Color("lightblue")]),
                        startPoint: .topLeading,
                        endPoint: .bottomTrailing)
         .edgesIgnoringSafeArea(.all)
@@ -107,7 +105,7 @@ struct CityTextView: View {
     
     var body: some View {
         Text("Cupertino, CA")
-            .font(.system(size: 32, weight: .medium, design: .default))
+            .font(.system(size: 32, weight: .heavy, design: .default))
             .foregroundColor(.white)
             .padding()
     }
