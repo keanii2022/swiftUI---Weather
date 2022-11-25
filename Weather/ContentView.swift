@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors:[.blue, .white]),
+            LinearGradient(gradient: Gradient(colors:[Color("lightblue"), .white]),
                            startPoint: .topLeading,
                            endPoint: .bottomTrailing)
             .edgesIgnoringSafeArea(.all)
@@ -31,8 +31,9 @@ struct ContentView: View {
                         .font(.system(size: 70, weight: .medium))
                         .foregroundColor(.white)
                 }
+                .padding(.bottom, 100)
                 
-                HStack(spacing: 20) {
+                HStack(spacing: 25) {
                     WeatherDayView(dayOfWeek: "MON",
                                    imageName: "cloud.sun.fill",
                                    temperature: 74)
@@ -42,12 +43,12 @@ struct ContentView: View {
                                    temperature: 74)
                     
                     WeatherDayView(dayOfWeek: "WED",
-                                   imageName: "cloud.sun.fill",
-                                   temperature: 74)
+                                   imageName: "cloud.rain.fill",
+                                   temperature: 84)
                     
                     WeatherDayView(dayOfWeek: "THRS",
-                                   imageName: "sun.max.fill",
-                                   temperature: 74)
+                                   imageName: "cloud.bolt.rain.fill",
+                                   temperature: 64)
                     
                     WeatherDayView(dayOfWeek: "FRI",
                                    imageName: "cloud.sun.fill",
