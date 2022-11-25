@@ -14,6 +14,7 @@
 		9FEB06C6292FFB0B00063B30 /* WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEB06C5292FFB0B00063B30 /* WeatherTests.swift */; };
 		9FEB06D0292FFB0B00063B30 /* WeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEB06CF292FFB0B00063B30 /* WeatherUITests.swift */; };
 		9FEB06D2292FFB0B00063B30 /* WeatherUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEB06D1292FFB0B00063B30 /* WeatherUITestsLaunchTests.swift */; };
+		9FEB06E22931483100063B30 /* WeatherButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEB06E12931483100063B30 /* WeatherButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		9FEB06CB292FFB0B00063B30 /* WeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FEB06CF292FFB0B00063B30 /* WeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUITests.swift; sourceTree = "<group>"; };
 		9FEB06D1292FFB0B00063B30 /* WeatherUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9FEB06E12931483100063B30 /* WeatherButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				9FEB06B6292FFB0A00063B30 /* ContentView.swift */,
 				9FEB06B8292FFB0B00063B30 /* Assets.xcassets */,
 				9FEB06BA292FFB0B00063B30 /* Preview Content */,
+				9FEB06E12931483100063B30 /* WeatherButton.swift */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			files = (
 				9FEB06B7292FFB0A00063B30 /* ContentView.swift in Sources */,
 				9FEB06B5292FFB0A00063B30 /* WeatherApp.swift in Sources */,
+				9FEB06E22931483100063B30 /* WeatherButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
