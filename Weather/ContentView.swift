@@ -20,7 +20,7 @@ struct ContentView: View {
                     .foregroundColor(.white)
                     .padding()
                 
-                VStack(spacing: 8) {
+                VStack(spacing: 10) {
                     Image(systemName: "cloud.sun.fill")
                         .renderingMode(.original)
                         .resizable()
@@ -31,24 +31,25 @@ struct ContentView: View {
                         .font(.system(size: 70, weight: .medium))
                         .foregroundColor(.white)
                 }
-                HStack {
-                    WeatherDayView(dayOfWeek: "TUE",
+                
+                HStack(spacing: 20) {
+                    WeatherDayView(dayOfWeek: "MON",
                                    imageName: "cloud.sun.fill",
                                    temperature: 74)
                     
                     WeatherDayView(dayOfWeek: "TUE",
+                                   imageName: "sun.max.fill",
+                                   temperature: 74)
+                    
+                    WeatherDayView(dayOfWeek: "WED",
                                    imageName: "cloud.sun.fill",
                                    temperature: 74)
                     
-                    WeatherDayView(dayOfWeek: "TUE",
-                                   imageName: "cloud.sun.fill",
+                    WeatherDayView(dayOfWeek: "THRS",
+                                   imageName: "sun.max.fill",
                                    temperature: 74)
                     
-                    WeatherDayView(dayOfWeek: "TUE",
-                                   imageName: "cloud.sun.fill",
-                                   temperature: 74)
-                    
-                    WeatherDayView(dayOfWeek: "TUE",
+                    WeatherDayView(dayOfWeek: "FRI",
                                    imageName: "cloud.sun.fill",
                                    temperature: 74)
                 }
@@ -71,10 +72,11 @@ struct WeatherDayView: View {
     
     var body: some View {
         VStack {
-            Text("TUE")
+            Text(dayOfWeek)
                 .font(.system(size: 16, weight: .medium, design: .default))
                 .foregroundColor(.white)
-            Image(systemName: "cloud.sun.fill")
+
+            Image(systemName: imageName)
                 .renderingMode(.original)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
