@@ -12,10 +12,7 @@ struct ContentView: View {
         ZStack {
             BackgroundView(topColor: Color("lightblue"), bottomColor: .white)
             VStack {
-                Text("Cupertino, CA")
-                    .font(.system(size: 32, weight: .medium, design: .default))
-                    .foregroundColor(.white)
-                    .padding()
+                CityTextView(cityName: "Cupertino, CA")
                 
                 VStack(spacing: 10) {
                     Image(systemName: "cloud.sun.fill")
@@ -122,4 +119,8 @@ struct CityTextView: View {
             .foregroundColor(.white)
             .padding()
     }
+}
+
+struct MainWeatherStatusView: View {
+    
 }
