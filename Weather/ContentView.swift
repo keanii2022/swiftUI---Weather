@@ -14,18 +14,8 @@ struct ContentView: View {
             VStack {
                 CityTextView(cityName: "Cupertino, CA")
                 
-                VStack(spacing: 10) {
-                    Image(systemName: "cloud.sun.fill")
-                        .renderingMode(.original)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 180, height: 180)
-                    
-                    Text("76°")
-                        .font(.system(size: 70, weight: .medium))
-                        .foregroundColor(.white)
-                }
-                .padding(.bottom, 100)
+                MainWeatherStatusView(imageName: "cloud.sun.fill",
+                                      temperature: 76)
                 
                 HStack(spacing: 25) {
                     WeatherDayView(dayOfWeek: "MON",
@@ -40,7 +30,7 @@ struct ContentView: View {
                                    imageName: "cloud.rain.fill",
                                    temperature: 84)
                     
-                    WeatherDayView(dayOfWeek: "THRS",
+                    WeatherDayView(dayOfWeek: "THU",
                                    imageName: "cloud.bolt.rain.fill",
                                    temperature: 64)
                     
@@ -123,4 +113,38 @@ struct CityTextView: View {
 
 struct MainWeatherStatusView: View {
     
+    var imageName: String
+    var temperature: Int
+      
+    
+    var body: some View {
+        VStack(spacing: 10) {
+            Image(systemName: imageName)
+                .renderingMode(.original)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 180, height: 180)
+            
+            Text("\(temperature)°")
+                .font(.system(size: 70, weight: .medium))
+                .foregroundColor(.white)
+        }
+        .padding(.bottom, 100)
+    }
+}
+
+struct WeatherButton {
+    
+    var title: String
+    var textColor: Color
+    var backgroundColor: Color
+    
+    var body: some View{
+        Text("Change Day Time")
+            .frame(width: 280, height: 50)
+            .background(backgroundColor)
+            .foregroundColor(textColor)
+            .font(.system(size:20, weight: .bold, design: .default))
+            .cornerRadius(10)
+    }
 }
